@@ -41,4 +41,22 @@ for (let customerType of customerTypes) {
   } else {
     extraDiscount = 0; 
   }
-  
+
+// Step 5
+
+  let subtotal = 0;
+
+  for (let product of products) {
+    if (product.inventory > 0) {
+      subtotal += product.promoPrice;
+      product.inventory -= 1;
+    }
+  }
+
+  let finalTotal = subtotal * (1 - extraDiscount);
+
+  console.log(`Customer (${customerType})`);
+  console.log(`Subtotal: $${subtotal.toFixed(2)}`);
+  console.log(`Final Total after discount: $${finalTotal.toFixed(2)}`);
+}
+
