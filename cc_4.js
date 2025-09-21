@@ -27,7 +27,7 @@ for (let product of products) {
   product.promoPrice = +(product.price * (1 - discount)).toFixed(2);
 }
 
-//Step 4
+// Step 4
 let customerTypes = ["regular", "student", "senior"];
 
 for (let customerType of customerTypes) {
@@ -63,4 +63,12 @@ console.log("\nSample discounted price a product:");
 let sample = products[0];
 for (let key in sample) {
   console.log(`${key}: ${sample[key]}`);
+}
+
+// Step 7
+console.log("\n Updated Products After Checkouts:");
+for (let [index, product] of Object.entries(products)) {
+  console.log(
+    `#${index} → ${product.name}, Category: ${product.category}, Price: $${product.price}, Promo: $${product.promoPrice}, Inventory: ${product.inventory}`
+  );
 }
