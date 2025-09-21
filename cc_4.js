@@ -28,7 +28,6 @@ for (let product of products) {
 }
 
 //Step 4
-
 let customerTypes = ["regular", "student", "senior"];
 
 for (let customerType of customerTypes) {
@@ -43,7 +42,6 @@ for (let customerType of customerTypes) {
   }
 
 // Step 5
-
   let subtotal = 0;
 
   for (let product of products) {
@@ -60,3 +58,9 @@ for (let customerType of customerTypes) {
   console.log(`Final Total after discount: $${finalTotal.toFixed(2)}`);
 }
 
+// Step 6
+console.log("\nSample discounted price a product:");
+let sample = products[0];
+for (let key in sample) {
+  console.log(`${key}: ${sample[key]}`);
+}
